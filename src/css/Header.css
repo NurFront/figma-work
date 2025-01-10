@@ -1,4 +1,3 @@
-/* Основной стиль */
 .header {
   display: flex;
   justify-content: center;
@@ -101,13 +100,13 @@
   }
 
   .basket {
-    left: 75px;
+    left: 70px;
     top: 15px;
     font-size: 10px;
   }
 
   .circle {
-    left: 90px;
+    left: 85px;
     bottom: 20px;
     font-size: 6px;
     padding: 2px;
