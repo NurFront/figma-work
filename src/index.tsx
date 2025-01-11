@@ -1,19 +1,18 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import App from './App';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';  // Убираем лишний импорт Router
-import Admin from './components/Admin';
+import Admin from './components/Admin'; // Путь к Admin
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
-root.render(
-  <React.StrictMode>
+const Root = () => {
+  return (
     <BrowserRouter>
-      <Routes> {/* Используйте только Routes для маршрутов */}
-        <Route path='/admin' element={<Admin />} />
+      <Routes>
         <Route path='/' element={<App />} />
+        <Route path='/admin' element={<Admin/>} /> 
       </Routes>
     </BrowserRouter>
-  </React.StrictMode>
-);
+  );
+};
+
+ReactDOM.render(<Root />, document.getElementById('root'));

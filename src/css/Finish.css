@@ -59,8 +59,10 @@
 }
 
 @media (max-width: 768px) {
+
   .finish-container {
     width: 90%;
+    overflow-x: hidden;
     height: auto;
     flex-direction: column;
     padding: 20px;
